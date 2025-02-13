@@ -79,19 +79,19 @@ class Options {
 					array(
 						'label_for'   => self::$slug['block_editor'],
 						'description' =>
-							esc_html__( 'Allows creating templates for bbPress post types in Site Editor.', 'bbp-block-theme' )
+							__( 'Allows creating templates for bbPress post types in Site Editor.', 'bbp-block-theme' )
 							. ' '
-							. esc_html__( 'Allows using blocks in bbPress post type content.', 'bbp-block-theme' )
+							. __( 'Allows using blocks in bbPress post type content.', 'bbp-block-theme' )
 							. '<br><br>'
 							. '<strong>'
-							. esc_html_x( 'Tip:', 'advice', 'bbp-block-theme' )
+							. _x( 'Tip:', 'advice', 'bbp-block-theme' )
 							. '</strong>'
 							. ' '
-							. esc_html__( 'You can enable block editor just temporarily.', 'bbp-block-theme' )
+							. __( 'You can enable block editor just temporarily.', 'bbp-block-theme' )
 							. ' '
-							. esc_html__( 'While it is enabled, create desired templates in Site Editor.', 'bbp-block-theme' )
+							. __( 'While it is enabled, create desired templates in Site Editor.', 'bbp-block-theme' )
 							. ' '
-							. esc_html__( 'Then disable this option to use classic editor for bbPress post type content, while keeping Site Editor templates still functioning.', 'bbp-block-theme' ),
+							. __( 'Then disable this option to use classic editor for bbPress post type content, while keeping Site Editor templates still functioning.', 'bbp-block-theme' ),
 						'default'     => false,
 					)
 				);
@@ -153,9 +153,9 @@ class Options {
 
 					foreach ( $description as $key => $desc ) {
 						if ( 0 === $key ) {
-							echo '<em style="vertical-align:middle;"> ' . $desc . '</em>';
+							echo '<em style="vertical-align:middle;"> ' . esc_html( $desc ) . '</em>';
 						} else {
-							echo '<p style="max-width:32em;margin-top:1em;"> ' . $desc . '</p>';
+							echo '<p style="max-width:32em;margin-top:1em;"> ' . esc_html( $desc ) . '</p>';
 						}
 					}
 				}
