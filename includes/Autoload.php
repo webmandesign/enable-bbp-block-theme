@@ -16,13 +16,6 @@ defined( 'ABSPATH' ) || exit;
 class BFBT_Autoload {
 
 	/**
-	 * PHP class namespace.
-	 *
-	 * @var string
-	 */
-	private static $namespace = 'WebManDesign\bbPress\FSE';
-
-	/**
 	 * Directory to load PHP classes from.
 	 *
 	 * @var string
@@ -35,10 +28,10 @@ class BFBT_Autoload {
 	 * @var array
 	 */
 	private static $allowed_files = array(
+		'/Compatibility.php',
 		'/Editor.php',
 		'/Load.php',
 		'/Options.php',
-		'/Theme.php',
 	);
 
 	/**
@@ -54,7 +47,7 @@ class BFBT_Autoload {
 
 		// Requirements check
 
-			if ( 0 !== strpos( $class_name, self::$namespace . '\\' ) ) {
+			if ( 0 !== strpos( $class_name, BFBT_NAMESPACE . '\\' ) ) {
 				return false;
 			}
 
@@ -62,7 +55,7 @@ class BFBT_Autoload {
 		// Variables
 
 			$path  = '';
-			$parts = explode( '\\', substr( $class_name, strlen( self::$namespace . '\\' ) ) );
+			$parts = explode( '\\', substr( $class_name, strlen( BFBT_NAMESPACE . '\\' ) ) );
 
 
 		// Processing

@@ -42,6 +42,7 @@ class Editor {
 					// judging by WordPress' filters applied on `the_content`.
 					add_filter( 'bbp_get_reply_content', 'do_blocks', 5 );
 					add_filter( 'bbp_get_topic_content', 'do_blocks', 5 );
+					add_filter( 'bbp_get_forum_content', 'do_blocks', 5 );
 				}
 
 	} // /init
@@ -79,7 +80,7 @@ class Editor {
 
 		// Processing
 
-			// Register pattern so it shows as suggested content for templates.
+			// Block pattern is used as starter content suggestion for templates.
 			register_block_pattern(
 				'bbp-block-theme/bbpress',
 				array(
@@ -94,7 +95,8 @@ class Editor {
 				)
 			);
 
-			// Register fallback `bbpress` template with our pattern as content.
+			// Template for displaying all bbPress content.
+			// This is essentially `bbpress` template template from `bbp_get_theme_compat_templates()`.
 			register_block_template(
 				'bbp-block-theme//bbpress',
 				array(
@@ -117,11 +119,15 @@ class Editor {
 
 		// Variables
 
-			$content   = '<!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->';
+			// We need to provide fallback content, at least.
+			$content = '<!-- wp:post-content {"align":"full","layout":{"type":"constrained"}} /-->';
+
+			/**
+			 * Template hierarchy from bbPress code.
+			 *
+			 * @see  bbPress/bbp_get_theme_compat_templates()
+			 */
 			$templates = array(
-				/**
-				 * @see  bbPress/bbp_get_theme_compat_templates()
-				 */
 				'forums',
 				'forum',
 				'generic',

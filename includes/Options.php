@@ -23,7 +23,7 @@ class Options {
 	public static $slug = array(
 
 		// Options section.
-		'_section' => 'bbp_fse',
+		'section' => 'bbp_fse',
 
 		// Options.
 		'block_editor' => 'bbp_fse_block_editor',
@@ -58,7 +58,7 @@ class Options {
 		// Variables
 
 			$group   = $page = 'bbpress';
-			$section = self::$slug['_section'];
+			$section = self::$slug['section'];
 
 
 		// Processing

@@ -43,16 +43,19 @@ class Load {
 
 		// Requirements check
 
-			if ( ! class_exists( 'bbPress' ) ) {
+			if (
+				! class_exists( 'bbPress' )
+				|| ! wp_is_block_theme()
+			) {
 				return;
 			}
 
 
 		// Processing
 
+			Compatibility::init();
 			Editor::init();
 			Options::init();
-			Theme::init();
 
 	} // /setup
 

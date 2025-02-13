@@ -29,6 +29,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Constants.
+define( 'BFBT_NAMESPACE', 'WebManDesign\bbPress\FSE' );
 define( 'BFBT_FILE', __FILE__ );
 define( 'BFBT_PATH', plugin_dir_path( BFBT_FILE ) ); // Trailing slashed.
 

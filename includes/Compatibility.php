@@ -1,6 +1,6 @@
 <?php
 /**
- * (Block) theme class.
+ * Block theme compatibility class.
  *
  * @package    bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
@@ -13,7 +13,7 @@ namespace WebManDesign\bbPress\FSE;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class Theme {
+class Compatibility {
 
 	/**
 	 * Initialization.
@@ -29,6 +29,8 @@ class Theme {
 			// Filters
 
 				/**
+				 * Tell bbPress what theme template file to use.
+				 *
 				 * @see  bbPress/bbp_get_theme_compat_templates()
 				 * @see  bbPress/bbp_get_query_template()
 				 */
@@ -36,6 +38,8 @@ class Theme {
 				add_filter( "bbp_{$key}_template", __CLASS__ . '::template', 10, 2 );
 
 				/**
+				 * Add helper post attribute to identify bbPress content.
+				 *
 				 * @see  bbPress/bbp_parse_args()
 				 * @see  bbPress/bbp_theme_compat_reset_post()
 				 */
@@ -45,7 +49,7 @@ class Theme {
 	} // /init
 
 	/**
-	 * Get theme template to display bbPress content.
+	 * Set theme template to display bbPress content.
 	 *
 	 * @see  bbPress/bbp_get_theme_compat_templates()
 	 * @see  bbPress/bbp_get_query_template()
@@ -115,7 +119,7 @@ class Theme {
 	 *
 	 * More info about the issue:
 	 * The `get_the_content()` in `render_block_core_post_content()`
-	 * provides incorrect post content for some bbPress views.
+	 * provides incorrect post content string for some bbPress views.
 	 *
 	 * @since  1.0.0
 	 *
@@ -128,17 +132,18 @@ class Theme {
 		// Processing
 
 			/**
-			 * For conditions
+			 * Conditions are taken from bbPress code.
+			 *
 			 * @see  bbPress/bbp_template_include_theme_compat()
 			 */
 			if (
 
 				// Archives & search results.
-				// Don't have to use bbPress conditional functions,
+				// No need to use bbPress conditional functions,
 				// we can simply use WordPress' native `is_archive()`.
 				is_archive()
 
-				// Users.
+				// User account screen.
 				|| bbp_is_single_user()
 				|| bbp_is_single_user_edit()
 			) {
@@ -148,7 +153,9 @@ class Theme {
 				if ( ! empty( $_post->is_bbpress_content ) ) {
 
 					/**
-					 * @see  WordPress/render_block_core_post_content()
+					 * Post Content block uses string replace.
+					 *
+					 * @see  render_block_core_post_content()
 					 */
 					$content = str_replace( ']]>', ']]&gt;', $_post->post_content );
 				}
