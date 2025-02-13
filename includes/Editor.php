@@ -32,7 +32,7 @@ class Editor {
 
 			// Filters
 
-				if ( get_option( Options::$slug['block_editor'] ) ) {
+				if ( get_option( Options::$slug['option']['block_editor'] ) ) {
 
 					add_filter( 'bbp_register_reply_post_type', __CLASS__ . '::show_in_rest' );
 					add_filter( 'bbp_register_topic_post_type', __CLASS__ . '::show_in_rest' );

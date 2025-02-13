@@ -22,11 +22,13 @@ class Options {
 	 */
 	public static $slug = array(
 
-		// Options section.
+		'page'    => 'bbpress',
+		'group'   => 'bbpress',
 		'section' => 'bbp_fse',
+		'option'  => array(
 
-		// Options.
-		'block_editor' => 'bbp_fse_block_editor',
+			'block_editor' => 'bbp_fse_block_editor',
+		),
 	);
 
 	/**
@@ -55,29 +57,23 @@ class Options {
 	 */
 	public static function settings() {
 
-		// Variables
-
-			$group   = $page = 'bbpress';
-			$section = self::$slug['section'];
-
-
 		// Processing
 
 			add_settings_section(
-				$section,
+				self::$slug['section'],
 				esc_html__( 'Block Theme Compatibility', 'bbp-block-theme' ),
 				'__return_empty_string',
-				$page
+				self::$slug['page']
 			);
 
 				add_settings_field(
-					self::$slug['block_editor'],
+					self::$slug['option']['block_editor'],
 					esc_html__( 'Enable Block Editor', 'bbp-block-theme' ),
 					__CLASS__ . '::field_checkbox',
-					$page,
-					$section,
+					self::$slug['page'],
+					self::$slug['section'],
 					array(
-						'label_for'   => self::$slug['block_editor'],
+						'label_for'   => self::$slug['option']['block_editor'],
 						'description' =>
 							__( 'Allows creating templates for bbPress post types in Site Editor.', 'bbp-block-theme' )
 							. ' '
@@ -97,8 +93,8 @@ class Options {
 				);
 
 				register_setting(
-					$group,
-					self::$slug['block_editor'],
+					self::$slug['group'],
+					self::$slug['option']['block_editor'],
 					array(
 						'type'              => 'boolean',
 						'sanitize_callback' => 'boolval',
@@ -155,7 +151,18 @@ class Options {
 						if ( 0 === $key ) {
 							echo '<em style="vertical-align:middle;"> ' . esc_html( $desc ) . '</em>';
 						} else {
-							echo '<p style="max-width:32em;margin-top:1em;"> ' . esc_html( $desc ) . '</p>';
+							echo '<p style="max-width:32em;margin-top:1em;"> ' . wp_kses(
+								$desc,
+								array(
+									'a' => array(
+										'href'  => array(),
+										'title' => array()
+									),
+									'br'     => array(),
+									'em'     => array(),
+									'strong' => array(),
+								)
+							) . '</p>';
 						}
 					}
 				}
