@@ -1,9 +1,9 @@
-=== bbPress for Block Themes ===
+=== Enable bbPress for Block Themes ===
 
 Contributors:      webmandesign
 Donate link:       https://www.webmandesign.eu/contact/#donation
 Author URI:        https://www.webmandesign.eu
-Plugin URI:        https://www.webmandesign.eu/portfolio/bbp-block-theme-wordpress-plugin/
+Plugin URI:        https://www.webmandesign.eu/portfolio/enable-bbp-block-theme-wordpress-plugin/
 Requires at least: 6.7
 Tested up to:      6.7
 Requires PHP:      7.0
@@ -28,7 +28,7 @@ Enables bbPress for a full site editing WordPress block theme, fixing WSoD (Whit
 
 If you answered yes to these questions, you're in luck.
 
-**bbPress for Block Themes** plugin fixes White Screen of Death for bbPress screens/views when you are using a WordPress block theme.
+**Enable bbPress for Block Themes** plugin fixes White Screen of Death for bbPress screens/views when you are using a WordPress block theme.
 
 = What the plugin does not do? =
 
@@ -41,7 +41,7 @@ If you answered yes to these questions, you're in luck.
 
 = Got a question or suggestion? =
 
-In case of any question or suggestion regarding this plugin, feel free to ask at [support section](https://wordpress.org/support/plugin/bbp-block-theme/), or at [GitHub repository issues](https://github.com/webmandesign/bbp-block-theme/issues).
+In case of any question or suggestion regarding this plugin, feel free to ask at [support section](https://wordpress.org/support/plugin/enable-bbp-block-theme/), or at [GitHub repository issues](https://github.com/webmandesign/enable-bbp-block-theme/issues).
 
 
 == Installation ==
@@ -50,13 +50,13 @@ First you need to install and activate [**bbPress** plugin](https://wordpress.or
 
 = Automatic installation: =
 
-1. Navigate to **Plugins → Add New Plugin** and search for **`bbPress for Block Themes`**.
+1. Navigate to **Plugins → Add New Plugin** and search for **`Enable bbPress for Block Themes`**.
 2. Once the plugin is displayed in the list, click the "**Install Now**" button, then "**Activate**" button.
 
 = Manual installation: =
 
 1. Download the plugin to your computer.
-2. Then unzip **bbPress for Block Themes** plugin download file and upload `bbp-block-theme` folder into the `…/wp-content/plugins/` directory on your website server.
+2. Then unzip **Enable bbPress for Block Themes** plugin download file and upload `enable-bbp-block-theme` folder into the `…/wp-content/plugins/` directory on your website server.
 3. Activate the plugin through the **Plugins** menu in WordPress admin area.
 
 Plugin works immediately after activation.<br>
@@ -117,7 +117,7 @@ In plugin options you can enable block editor for bbPress post types, which allo
 
 == Changelog ==
 
-Please see the [`changelog.md` file](https://github.com/webmandesign/bbp-block-theme/blob/master/changelog.md) for details.
+Please see the [`changelog.md` file](https://github.com/webmandesign/enable-bbp-block-theme/blob/master/changelog.md) for details.
 
 
 == Upgrade Notice ==

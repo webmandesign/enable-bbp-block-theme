@@ -2,13 +2,13 @@
 /**
  * Block theme compatibility class.
  *
- * @package    bbPress for Block Themes
+ * @package    Enable bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
  */
 
-namespace WebManDesign\bbPress\FSE;
+namespace WebManDesign\bbPress\Block_Theme;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;

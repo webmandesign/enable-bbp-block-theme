@@ -2,13 +2,13 @@
 /**
  * Editor class.
  *
- * @package    bbPress for Block Themes
+ * @package    Enable bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
  */
 
-namespace WebManDesign\bbPress\FSE;
+namespace WebManDesign\bbPress\Block_Theme;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -82,9 +82,9 @@ class Editor {
 
 			// Block pattern is used as starter content suggestion for templates.
 			register_block_pattern(
-				'bbp-block-theme/bbpress',
+				'enable-bbp-block-theme/bbpress',
 				array(
-					'title'         => esc_html__( 'bbPress content', 'bbp-block-theme' ),
+					'title'         => esc_html__( 'bbPress content', 'enable-bbp-block-theme' ),
 					'inserter'      => false,
 					'content'       => self::get_template_content(),
 					'templateTypes' => array(
@@ -98,11 +98,11 @@ class Editor {
 			// Template for displaying all bbPress content.
 			// This is essentially `bbpress` template template from `bbp_get_theme_compat_templates()`.
 			register_block_template(
-				'bbp-block-theme//bbpress',
+				'enable-bbp-block-theme//bbpress',
 				array(
-					'title'       => esc_html__( 'bbPress content', 'bbp-block-theme' ),
-					'description' => esc_html__( 'Global template for bbPress views.', 'bbp-block-theme' ),
-					'content'     => '<!-- wp:pattern {"slug":"bbp-block-theme/bbpress"} /-->',
+					'title'       => esc_html__( 'bbPress content', 'enable-bbp-block-theme' ),
+					'description' => esc_html__( 'Global template for bbPress views.', 'enable-bbp-block-theme' ),
+					'content'     => '<!-- wp:pattern {"slug":"enable-bbp-block-theme/bbpress"} /-->',
 				)
 			);
 

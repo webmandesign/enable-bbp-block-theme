@@ -2,13 +2,13 @@
 /**
  * Options class.
  *
- * @package    bbPress for Block Themes
+ * @package    Enable bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
  */
 
-namespace WebManDesign\bbPress\FSE;
+namespace WebManDesign\bbPress\Block_Theme;
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
@@ -61,33 +61,33 @@ class Options {
 
 			add_settings_section(
 				self::$slug['section'],
-				esc_html__( 'Block Theme Compatibility', 'bbp-block-theme' ),
+				esc_html__( 'Block Theme Compatibility', 'enable-bbp-block-theme' ),
 				'__return_empty_string',
 				self::$slug['page']
 			);
 
 				add_settings_field(
 					self::$slug['option']['block_editor'],
-					esc_html__( 'Enable Block Editor', 'bbp-block-theme' ),
+					esc_html__( 'Enable Block Editor', 'enable-bbp-block-theme' ),
 					__CLASS__ . '::field_checkbox',
 					self::$slug['page'],
 					self::$slug['section'],
 					array(
 						'label_for'   => self::$slug['option']['block_editor'],
 						'description' =>
-							__( 'Allows creating templates for bbPress post types in Site Editor.', 'bbp-block-theme' )
+							__( 'Allows creating templates for bbPress post types in Site Editor.', 'enable-bbp-block-theme' )
 							. ' '
-							. __( 'Allows using blocks in bbPress post type content.', 'bbp-block-theme' )
+							. __( 'Allows using blocks in bbPress post type content.', 'enable-bbp-block-theme' )
 							. '<br><br>'
 							. '<strong>'
-							. _x( 'Tip:', 'advice', 'bbp-block-theme' )
+							. _x( 'Tip:', 'advice', 'enable-bbp-block-theme' )
 							. '</strong>'
 							. ' '
-							. __( 'You can enable block editor just temporarily.', 'bbp-block-theme' )
+							. __( 'You can enable block editor just temporarily.', 'enable-bbp-block-theme' )
 							. ' '
-							. __( 'While it is enabled, create desired templates in Site Editor.', 'bbp-block-theme' )
+							. __( 'While it is enabled, create desired templates in Site Editor.', 'enable-bbp-block-theme' )
 							. ' '
-							. __( 'Then disable this option to use classic editor for bbPress post type content, while keeping Site Editor templates still functioning.', 'bbp-block-theme' ),
+							. __( 'Then disable this option to use classic editor for bbPress post type content, while keeping Site Editor templates still functioning.', 'enable-bbp-block-theme' ),
 						'default'     => false,
 					)
 				);

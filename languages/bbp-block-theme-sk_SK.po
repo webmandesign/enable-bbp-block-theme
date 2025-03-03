@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: bbPress for Block Themes\n"
+"Project-Id-Version: Enable bbPress for Block Themes\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "POT-Creation-Date: 2025-02-12 21:56+0100\n"
 "PO-Revision-Date: 2025-02-12 22:02+0100\n"

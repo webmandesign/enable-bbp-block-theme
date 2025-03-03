@@ -4,7 +4,7 @@
  *
  * @link  https://www.php-fig.org/psr/psr-4/
  *
- * @package    bbPress for Block Themes
+ * @package    Enable bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since  1.0.0
@@ -13,7 +13,7 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-class BFBT_Autoload {
+class WMD_EBBT_Autoload {
 
 	/**
 	 * Directory to load PHP classes from.
@@ -47,7 +47,7 @@ class BFBT_Autoload {
 
 		// Requirements check
 
-			if ( 0 !== strpos( $class_name, BFBT_NAMESPACE . '\\' ) ) {
+			if ( 0 !== strpos( $class_name, WMD_EBBT_NAMESPACE . '\\' ) ) {
 				return false;
 			}
 
@@ -55,7 +55,7 @@ class BFBT_Autoload {
 		// Variables
 
 			$path  = '';
-			$parts = explode( '\\', substr( $class_name, strlen( BFBT_NAMESPACE . '\\' ) ) );
+			$parts = explode( '\\', substr( $class_name, strlen( WMD_EBBT_NAMESPACE . '\\' ) ) );
 
 
 		// Processing
@@ -69,7 +69,7 @@ class BFBT_Autoload {
 				return false;
 			}
 
-			$path = BFBT_PATH . self::$directory . $path;
+			$path = WMD_EBBT_PATH . self::$directory . $path;
 
 			if ( ! file_exists( $path ) ) {
 				return false;
@@ -86,4 +86,4 @@ class BFBT_Autoload {
 
 }
 
-spl_autoload_register( 'BFBT_Autoload::register' );
+spl_autoload_register( 'WMD_EBBT_Autoload::register' );

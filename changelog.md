@@ -1,4 +1,4 @@
-# bbPress for Block Themes changelog
+# Enable bbPress for Block Themes changelog
 
 ## 1.0.0, 20250213
 
