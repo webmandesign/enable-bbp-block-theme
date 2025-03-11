@@ -1,64 +1,65 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Enable bbPress for Block Themes\n"
 "Report-Msgid-Bugs-To: https://support.webmandesign.eu\n"
 "POT-Creation-Date: 2025-02-12 21:56+0100\n"
-"PO-Revision-Date: 2015-05-12 20:39+0100\n"
+"PO-Revision-Date: 2025-03-11 14:52+0100\n"
 "Last-Translator: Oliver Juhas, WebMan Design\n"
 "Language-Team: WebMan Design\n"
-"Language: en\n"
+"Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: includes/Editor.php:86 includes/Editor.php:101
 msgid "bbPress content"
-msgstr ""
+msgstr "Obsah bbPress"
 
 #: includes/Editor.php:102
 msgid "Global template for bbPress views."
-msgstr ""
+msgstr "Globálna šablóna pre zobrazenia bbPress."
 
 #: includes/Options.php:68
 msgid "Block Theme Compatibility"
-msgstr ""
+msgstr "Kompatibilita s blokovou témou"
 
 #: includes/Options.php:75
 msgid "Enable Block Editor"
-msgstr ""
+msgstr "Povoliť editor blokov"
 
 #: includes/Options.php:82
 msgid "Allows creating templates for bbPress post types in Site Editor."
-msgstr ""
+msgstr "Umožňuje vytvárať šablóny pre bbPress obsah v editore webstránky."
 
 #: includes/Options.php:84
 msgid "Allows using blocks in bbPress post type content."
-msgstr ""
+msgstr "Umožňuje používať bloky v obsahu bbPress príspevkov."
 
 #: includes/Options.php:87
 msgctxt "advice"
 msgid "Tip:"
-msgstr ""
+msgstr "Tip:"
 
 #: includes/Options.php:90
 msgid "You can enable block editor just temporarily."
-msgstr ""
+msgstr "Editor blokov môžete povoliť len dočasne."
 
 #: includes/Options.php:92
 msgid "While it is enabled, create desired templates in Site Editor."
-msgstr ""
+msgstr "Kým je povolený, vytvorte požadované šablóny v editore webstránky."
 
 #: includes/Options.php:94
 msgid ""
-"Then disable this option to use classic editor for bbPress post type content, "
-"while keeping Site Editor templates still functioning."
+"Then disable this option to use classic editor for bbPress post type "
+"content, while keeping Site Editor templates still functioning."
 msgstr ""
+"Následne toto nastavenie vypnite pre použitie klasického editora bbPress "
+"príspevkov, pričom šablóny editora webstránky zostanú naďalej funkčné."
