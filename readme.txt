@@ -36,7 +36,7 @@ If you answered yes to these questions, you're in luck.
   Design is very specific thing to each theme. If you want to style your bbPress appearance, use [custom CSS code in Styles section of Site Editor](https://wordpress.org/documentation/article/styles-overview/#applying-custom-css), or use other means, such as 3rd party plugins.<br><br>
   You may especially need to style form fields, buttons and pagination.<br><br>
 - Plugin **does not provide blocks** to tweak bbPress views to your liking.<br><br>
-  bbPress plugin contains no blocks you can use to create custom forum layouts (as of February 2025). It only displays predefined forum layouts on your website using your theme's `page.html` template file.<br><br>
+  bbPress plugin contains no blocks you can use to create custom forum layouts (as of February 2025).<br><br>
   However, in Site Editor you can edit "**bbPress content**" template. This template is used to display all bbPress content. (If you enable block editor for bbPress post types, you can further edit additional templates.)
 
 = Got a question or suggestion? =
