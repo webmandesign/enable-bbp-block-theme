@@ -3,7 +3,7 @@
  * Plugin Name:  Enable bbPress for Block Themes
  * Plugin URI:   https://www.webmandesign.eu/portfolio/enable-bbp-block-theme-wordpress-plugin/
  * Description:  Enables bbPress for a full site editing WordPress block theme.
- * Version:      1.0.0
+ * Version:      1.0.1
  * Author:       WebMan Design, Oliver Juhas
  * Author URI:   https://www.webmandesign.eu/
  * License:      GPL-3.0-or-later

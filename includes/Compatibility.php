@@ -5,7 +5,8 @@
  * @package    Enable bbPress for Block Themes
  * @copyright  WebMan Design, Oliver Juhas
  *
- * @since  1.0.0
+ * @since    1.0.0
+ * @version  1.0.1
  */
 
 namespace WebManDesign\bbPress\Block_Theme;
@@ -54,7 +55,8 @@ class Compatibility {
 	 * @see  bbPress/bbp_get_theme_compat_templates()
 	 * @see  bbPress/bbp_get_query_template()
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.0.1
 	 *
 	 * @param  string $template
 	 * @param  array  $templates
@@ -62,6 +64,11 @@ class Compatibility {
 	 * @return  string
 	 */
 	public static function template( string $template, array $templates ): string {
+
+		// Variables
+
+			$post_type = get_post_type();
+
 
 		// Processing
 
@@ -71,10 +78,13 @@ class Compatibility {
 				add_filter( 'the_content', __CLASS__ . '::post_content', 0 );
 			}
 
-			if ( is_singular() ) {
-				array_unshift( $templates, 'single-' . get_post_type() . '.php' );
-			} elseif ( is_archive() ) {
-				array_unshift( $templates, 'archive-' . get_post_type() . '.php' );
+			if ( ! empty( $post_type ) ) {
+
+				if ( is_singular() ) {
+					array_unshift( $templates, 'single-' . $post_type . '.php' );
+				} elseif ( is_archive() ) {
+					array_unshift( $templates, 'archive-' . $post_type . '.php' );
+				}
 			}
 
 
