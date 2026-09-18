@@ -4,10 +4,10 @@ Contributors:      webmandesign
 Donate link:       https://www.webmandesign.eu/contact/#donation
 Author URI:        https://www.webmandesign.eu
 Plugin URI:        https://www.webmandesign.eu/portfolio/enable-bbp-block-theme-wordpress-plugin/
-Requires at least: 6.7
-Tested up to:      6.8
-Requires PHP:      7.0
-Stable tag:        1.0.1
+Requires at least: 7.0
+Tested up to:      7.1
+Requires PHP:      8.0
+Stable tag:        1.1.0
 License:           GPL-3.0-or-later
 License URI:       http://www.gnu.org/licenses/gpl-3.0.html
 Tags:              bbPress, block theme, fse, full site editing, display
@@ -16,6 +16,10 @@ Enables bbPress for a full site editing WordPress block theme.
 
 
 == Description ==
+
+**IMPORTANT**: _Since **bbPress 2.6.17** you might not need to use this plugin as bbPress should work with block themes._
+
+---
 
 Enables bbPress for a full site editing WordPress block theme, fixing WSoD (White Screen of Death).
 
@@ -63,6 +67,12 @@ Plugin works immediately after activation.<br>
 Additionally, you can enable block editor for bbPress post types in **Settings → Forums → "Block Theme Compatibility"** section.
 
 == Frequently Asked Questions ==
+
+= Do I really need this plugin? =
+
+As of version 2.6.17 **bbPress** supports block themes. So, if you are using **bbPress 2.6.17** (or newer), you might not need this (Enable bbPress for Block Themes) plugin anymore.
+
+Please check all your bbPress pages/views to see if they work correctly without installing Enable bbPress for Block Themes plugin.
 
 = How does it work? =
 
@@ -121,6 +131,9 @@ Please see the [`changelog.md` file](https://github.com/webmandesign/enable-bbp-
 
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Compatible with bbPress 2.6.17: making sure the original bbPress template hierarchy is preserved.
 
 = 1.0.1 =
 Fixing forum search and tags issue.

@@ -6,7 +6,7 @@
  * @copyright  WebMan Design, Oliver Juhas
  *
  * @since    1.0.0
- * @version  1.0.1
+ * @version  1.1.0
  */
 
 namespace WebManDesign\bbPress\Block_Theme;
@@ -19,7 +19,8 @@ class Compatibility {
 	/**
 	 * Initialization.
 	 *
-	 * @since  1.0.0
+	 * @since    1.0.0
+	 * @version  1.1.0
 	 *
 	 * @return  void
 	 */
@@ -28,6 +29,12 @@ class Compatibility {
 		// Processing
 
 			// Filters
+
+				/**
+				 * Making sure the original bbPress template hierarchy is preserved.
+				 * (Compatibility with bbPress 2.6.17+)
+				 */
+				add_filter( 'bbp_get_theme_canvas_template', 'bbp_get_theme_compat_templates' );
 
 				/**
 				 * Tell bbPress what theme template file to use.
