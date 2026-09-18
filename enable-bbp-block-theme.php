@@ -32,9 +32,8 @@ defined( 'ABSPATH' ) || exit;
 
 // Constants.
 
-	const WMD_EBBT_NAMESPACE = __NAMESPACE__;
-	const WMD_EBBT_FILE      = __FILE__;
-	const WMD_EBBT_PATH      = trailingslashit( plugin_dir_path( WMD_EBBT_FILE ) );
+	define( 'WMD_EBBT_NAMESPACE', __NAMESPACE__ );
+	define( 'WMD_EBBT_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 // Load the functionality.
 
